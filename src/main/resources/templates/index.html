@@ -17,6 +17,7 @@
 <th> employee first name </th>
 <th> employee last name </th>
 <th> email </th>
+<th>Action</th>
 </tr>
 </thead>
 <tbody>
@@ -24,7 +25,9 @@
 <td th:text="${employee.fname}"></td>
 <td th:text="${employee.lname}"></td>
 <td th:text="${employee.emailid}"></td>
-
+<td><a th:href = "@{/updateEmployeeForm/{id}(id=${employee.id})}" class="btn btn-primary">Update</a>
+<td><a th:href = "@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger">Delete</a>
+<!-- @ represent context path of our application -->
 </tr>
 </tbody>
 </table>
